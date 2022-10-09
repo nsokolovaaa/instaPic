@@ -1,5 +1,6 @@
 package com.example.instapic.Payload.Responce.Request;
 
+import com.example.instapic.Annotation.PasswordMatches;
 import lombok.Data;
 
 import javax.validation.constraints.Email;
@@ -8,6 +9,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 @Data
+@PasswordMatches
 public class SignUpRequest {
     @Email(message = "It should have email ")
     @NotBlank(message = "User email is required")
